@@ -1,0 +1,143 @@
+2025-06-12T11:23:20.405-04:00  INFO 7028 --- [alojamiento] [main] a.s.alojamiento.AlojamientoApplication   : Starting AlojamientoApplication using Java 21.0.7 with PID 7028 (D:\SIS 414\alojamiento\build\classes\java\main started by USUARIO in D:\SIS 414\alojamiento)
+2025-06-12T11:23:20.437-04:00  INFO 7028 --- [alojamiento] [main] a.s.alojamiento.AlojamientoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-12T11:23:22.458-04:00  INFO 7028 --- [alojamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-12T11:23:22.694-04:00  INFO 7028 --- [alojamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 230 ms. Found 5 JPA repository interfaces.
+2025-06-12T11:23:24.233-04:00  INFO 7028 --- [alojamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-12T11:23:24.265-04:00  INFO 7028 --- [alojamiento] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-12T11:23:24.265-04:00  INFO 7028 --- [alojamiento] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-12T11:23:24.358-04:00  INFO 7028 --- [alojamiento] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-12T11:23:24.374-04:00  INFO 7028 --- [alojamiento] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3771 ms
+2025-06-12T11:23:24.792-04:00  INFO 7028 --- [alojamiento] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-12T11:23:24.888-04:00  INFO 7028 --- [alojamiento] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-06-12T11:23:24.935-04:00  INFO 7028 --- [alojamiento] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-12T11:23:25.414-04:00  INFO 7028 --- [alojamiento] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-12T11:23:25.476-04:00  INFO 7028 --- [alojamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-12T11:23:26.248-04:00  INFO 7028 --- [alojamiento] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@56478522
+2025-06-12T11:23:26.248-04:00  INFO 7028 --- [alojamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-12T11:23:26.342-04:00  WARN 7028 --- [alojamiento] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-12T11:23:26.373-04:00  INFO 7028 --- [alojamiento] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-12T11:23:28.519-04:00  INFO 7028 --- [alojamiento] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-12T11:23:28.769-04:00  INFO 7028 --- [alojamiento] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-12T11:23:29.578-04:00  WARN 7028 --- [alojamiento] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-12T11:23:29.694-04:00  INFO 7028 --- [alojamiento] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-06-12T11:23:30.374-04:00  INFO 7028 --- [alojamiento] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-12T11:23:31.014-04:00  INFO 7028 --- [alojamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-12T11:23:31.030-04:00  INFO 7028 --- [alojamiento] [main] a.s.alojamiento.AlojamientoApplication   : Started AlojamientoApplication in 11.754 seconds (process running for 12.522)
+2025-06-12T15:56:09.584-04:00  INFO 11320 --- [alojamiento] [main] a.s.alojamiento.AlojamientoApplication   : Starting AlojamientoApplication using Java 21.0.7 with PID 11320 (D:\SIS 414\alojamiento\build\classes\java\main started by USUARIO in D:\SIS 414\alojamiento)
+2025-06-12T15:56:09.589-04:00  INFO 11320 --- [alojamiento] [main] a.s.alojamiento.AlojamientoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-12T15:56:10.997-04:00  INFO 11320 --- [alojamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-12T15:56:11.088-04:00  INFO 11320 --- [alojamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 5 JPA repository interfaces.
+2025-06-12T15:56:13.182-04:00  INFO 11320 --- [alojamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-12T15:56:13.203-04:00  INFO 11320 --- [alojamiento] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-12T15:56:13.203-04:00  INFO 11320 --- [alojamiento] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-12T15:56:13.315-04:00  INFO 11320 --- [alojamiento] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-12T15:56:13.317-04:00  INFO 11320 --- [alojamiento] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3649 ms
+2025-06-12T15:56:14.032-04:00  INFO 11320 --- [alojamiento] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-12T15:56:14.206-04:00  INFO 11320 --- [alojamiento] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-06-12T15:56:14.273-04:00  INFO 11320 --- [alojamiento] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-12T15:56:14.915-04:00  INFO 11320 --- [alojamiento] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-12T15:56:14.970-04:00  INFO 11320 --- [alojamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-12T15:56:15.317-04:00  INFO 11320 --- [alojamiento] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@631944d4
+2025-06-12T15:56:15.323-04:00  INFO 11320 --- [alojamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-12T15:56:15.394-04:00  WARN 11320 --- [alojamiento] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-12T15:56:15.430-04:00  INFO 11320 --- [alojamiento] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-12T15:56:19.491-04:00  INFO 11320 --- [alojamiento] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-12T15:56:19.813-04:00  INFO 11320 --- [alojamiento] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-12T15:56:21.515-04:00  WARN 11320 --- [alojamiento] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-12T15:56:21.636-04:00  INFO 11320 --- [alojamiento] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-06-12T15:56:22.684-04:00  INFO 11320 --- [alojamiento] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-12T15:56:23.582-04:00  INFO 11320 --- [alojamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-12T15:56:23.627-04:00  INFO 11320 --- [alojamiento] [main] a.s.alojamiento.AlojamientoApplication   : Started AlojamientoApplication in 14.696 seconds (process running for 15.323)
+2025-06-12T15:56:28.149-04:00  INFO 11320 --- [alojamiento] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-12T15:56:28.151-04:00  INFO 11320 --- [alojamiento] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-12T15:56:28.151-04:00  INFO 11320 --- [alojamiento] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-06-12T15:57:28.393-04:00  WARN 11320 --- [alojamiento] [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2025-06-12T16:03:16.259-04:00  INFO 7568 --- [alojamiento] [main] a.s.alojamiento.AlojamientoApplication   : Starting AlojamientoApplication using Java 21.0.7 with PID 7568 (D:\SIS 414\alojamiento\build\classes\java\main started by USUARIO in D:\SIS 414\alojamiento)
+2025-06-12T16:03:16.282-04:00  INFO 7568 --- [alojamiento] [main] a.s.alojamiento.AlojamientoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-12T16:03:20.055-04:00  INFO 7568 --- [alojamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-12T16:03:20.374-04:00  INFO 7568 --- [alojamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 298 ms. Found 5 JPA repository interfaces.
+2025-06-12T16:03:21.976-04:00  INFO 7568 --- [alojamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-12T16:03:22.004-04:00  INFO 7568 --- [alojamiento] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-12T16:03:22.004-04:00  INFO 7568 --- [alojamiento] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-12T16:03:22.131-04:00  INFO 7568 --- [alojamiento] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-12T16:03:22.131-04:00  INFO 7568 --- [alojamiento] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5613 ms
+2025-06-12T16:03:23.207-04:00  INFO 7568 --- [alojamiento] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-12T16:03:23.322-04:00  INFO 7568 --- [alojamiento] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-06-12T16:03:23.401-04:00  INFO 7568 --- [alojamiento] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-12T16:03:25.114-04:00  INFO 7568 --- [alojamiento] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-12T16:03:25.307-04:00  INFO 7568 --- [alojamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-12T16:03:26.221-04:00  INFO 7568 --- [alojamiento] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@500ec769
+2025-06-12T16:03:26.229-04:00  INFO 7568 --- [alojamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-12T16:03:26.348-04:00  WARN 7568 --- [alojamiento] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-12T16:03:26.434-04:00  INFO 7568 --- [alojamiento] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-12T16:03:30.214-04:00  INFO 7568 --- [alojamiento] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-12T16:03:30.501-04:00  INFO 7568 --- [alojamiento] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-12T16:03:32.453-04:00  WARN 7568 --- [alojamiento] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-12T16:03:33.102-04:00  INFO 7568 --- [alojamiento] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-06-12T16:03:33.982-04:00  INFO 7568 --- [alojamiento] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-12T16:03:35.049-04:00  INFO 7568 --- [alojamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-12T16:03:35.082-04:00  INFO 7568 --- [alojamiento] [main] a.s.alojamiento.AlojamientoApplication   : Started AlojamientoApplication in 20.182 seconds (process running for 21.374)
+2025-06-12T16:03:36.739-04:00  INFO 7568 --- [alojamiento] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-12T16:03:36.741-04:00  INFO 7568 --- [alojamiento] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-12T16:03:36.745-04:00  INFO 7568 --- [alojamiento] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-06-12T16:04:13.576-04:00  WARN 7568 --- [alojamiento] [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2025-06-12T16:05:16.662-04:00  WARN 7568 --- [alojamiento] [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2025-06-12T16:06:21.476-04:00  WARN 7568 --- [alojamiento] [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2025-06-12T16:07:07.943-04:00  WARN 7568 --- [alojamiento] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2025-06-12T16:07:25.023-04:00  INFO 6768 --- [alojamiento] [main] a.s.alojamiento.AlojamientoApplication   : Starting AlojamientoApplication using Java 21.0.7 with PID 6768 (D:\SIS 414\alojamiento\build\classes\java\main started by USUARIO in D:\SIS 414\alojamiento)
+2025-06-12T16:07:25.025-04:00  INFO 6768 --- [alojamiento] [main] a.s.alojamiento.AlojamientoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-12T16:07:27.683-04:00  INFO 6768 --- [alojamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-12T16:07:27.893-04:00  INFO 6768 --- [alojamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 189 ms. Found 5 JPA repository interfaces.
+2025-06-12T16:07:28.938-04:00  INFO 6768 --- [alojamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-12T16:07:28.960-04:00  INFO 6768 --- [alojamiento] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-12T16:07:28.960-04:00  INFO 6768 --- [alojamiento] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-12T16:07:29.061-04:00  INFO 6768 --- [alojamiento] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-12T16:07:29.061-04:00  INFO 6768 --- [alojamiento] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3925 ms
+2025-06-12T16:07:29.418-04:00  INFO 6768 --- [alojamiento] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-12T16:07:29.498-04:00  INFO 6768 --- [alojamiento] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-06-12T16:07:29.546-04:00  INFO 6768 --- [alojamiento] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-12T16:07:30.079-04:00  INFO 6768 --- [alojamiento] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-12T16:07:30.130-04:00  INFO 6768 --- [alojamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-12T16:07:30.623-04:00  INFO 6768 --- [alojamiento] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3caf5c96
+2025-06-12T16:07:30.625-04:00  INFO 6768 --- [alojamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-12T16:07:30.708-04:00  WARN 6768 --- [alojamiento] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-12T16:07:30.739-04:00  INFO 6768 --- [alojamiento] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-12T16:07:33.517-04:00  INFO 6768 --- [alojamiento] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-12T16:07:33.913-04:00  INFO 6768 --- [alojamiento] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-12T16:07:37.612-04:00  WARN 6768 --- [alojamiento] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-12T16:07:37.726-04:00  INFO 6768 --- [alojamiento] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-06-12T16:07:40.066-04:00  INFO 6768 --- [alojamiento] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-12T16:07:41.514-04:00  INFO 6768 --- [alojamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-12T16:07:41.532-04:00  INFO 6768 --- [alojamiento] [main] a.s.alojamiento.AlojamientoApplication   : Started AlojamientoApplication in 17.281 seconds (process running for 17.844)
+2025-06-12T16:07:42.738-04:00  INFO 6768 --- [alojamiento] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-12T16:07:42.738-04:00  INFO 6768 --- [alojamiento] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-12T16:07:42.746-04:00  INFO 6768 --- [alojamiento] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2025-06-12T16:08:05.832-04:00  INFO 6768 --- [alojamiento] [http-nio-8080-exec-6] a.s.a.controller.AuthController          : Token agregado a la blacklist: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJGcyIsImlhdCI6MTc0OTc1ODg2MywiZXhwIjoxNzQ5NzYyNDYzfQ.WcBuQehTC1gAibI-E8begAZZiDkOm8ykWGQpnv8upic
