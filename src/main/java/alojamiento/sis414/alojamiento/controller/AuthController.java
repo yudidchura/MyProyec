@@ -38,7 +38,7 @@ public class AuthController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("El nombre de usuario ya existe.");
         }
 
-        userRequest.setId(null); // Asegura que no se envíe un ID manualmente
+        userRequest.setId(null);
         Usuario savedUser = usuarioRepository.save(userRequest);
         return ResponseEntity.status(HttpStatus.CREATED).body(savedUser);
     }
@@ -54,6 +54,7 @@ public class AuthController {
             return ResponseEntity.status(401).body("Credenciales inválidas");
         }
     }
+
 
     @PostMapping("/logout")
     public ResponseEntity<String> logout(HttpServletRequest request) {

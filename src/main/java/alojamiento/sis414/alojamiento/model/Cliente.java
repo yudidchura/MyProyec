@@ -1,5 +1,6 @@
 package alojamiento.sis414.alojamiento.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java.util.List;
 
@@ -8,6 +9,7 @@ import java.util.List;
 public class Cliente extends Persona {
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
     private List<Reserva> reservas;
 
     public Cliente() {}
