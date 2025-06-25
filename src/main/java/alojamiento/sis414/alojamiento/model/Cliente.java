@@ -6,7 +6,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "clientes")
-public class Cliente extends Persona {
+public class   Cliente extends Persona {
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnore

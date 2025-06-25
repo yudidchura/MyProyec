@@ -12,7 +12,6 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +23,8 @@ import java.util.Optional;
 
 @SecurityRequirement(name = "bearerAuth")
 @RestController
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin(origins = "http://localhost:3000")
+//@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/reservas")
 @Tag(name = "Reserva", description = "This endpoint permits create, read, update and delete operations for reservas")
 public class ReservaController {
@@ -37,8 +37,8 @@ public class ReservaController {
 
 
     public ReservaController(ReservaRepository reservaRepository,
-                              ClienteRepository clienteRepository,
-                              HabitacionRepository habitacionRepository) {
+                             ClienteRepository clienteRepository,
+                             HabitacionRepository habitacionRepository) {
         this.reservaRepository = reservaRepository;
         this.clienteRepository = clienteRepository;
         this.habitacionRepository = habitacionRepository;
@@ -76,7 +76,7 @@ public class ReservaController {
 
         reservaRequest.setCliente(clienteOpt.get());
         reservaRequest.setHabitacion(habitacionOpt.get());
-        reservaRequest.setId(null); // Evita que se mande un ID para sobreescritura
+        reservaRequest.setId(null);
 
         Reserva nuevaReserva = reservaRepository.save(reservaRequest);
         return ResponseEntity.status(HttpStatus.CREATED).body(nuevaReserva);

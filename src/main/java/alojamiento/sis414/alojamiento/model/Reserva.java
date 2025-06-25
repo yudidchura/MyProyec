@@ -18,12 +18,10 @@ public class Reserva {
 
     @ManyToOne
     @JoinColumn(name = "cliente_id")
-    @Schema(description = "Solo enviar el ID del cliente", implementation = ClienteIdOnly.class)
     private Cliente cliente;
 
     @ManyToOne
     @JoinColumn(name = "habitacion_id")
-    @Schema(description = "Solo enviar el ID de la habitación", implementation = HabitacionIdOnly.class)
     private Habitacion habitacion;
 
     public Reserva() {}
@@ -50,12 +48,5 @@ public class Reserva {
     public Habitacion getHabitacion() { return habitacion; }
     public void setHabitacion(Habitacion habitacion) { this.habitacion = habitacion; }
 
-    // 👇 Clases internas para mostrar solo el ID en Swagger
-    public static class ClienteIdOnly {
-        public Long id;
-    }
 
-    public static class HabitacionIdOnly {
-        public Long id;
-    }
 }

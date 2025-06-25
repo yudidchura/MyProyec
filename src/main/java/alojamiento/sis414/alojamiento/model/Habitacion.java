@@ -11,7 +11,7 @@ public class Habitacion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY) // solo visible en respuestas
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Long id;
 
     private String numero;
@@ -23,7 +23,7 @@ public class Habitacion {
     private boolean disponible;
 
     @OneToMany(mappedBy = "habitacion", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonIgnore // no se muestra en el input ni output
+    @JsonIgnore
     private List<Reserva> reservas;
 
     public Habitacion() {}

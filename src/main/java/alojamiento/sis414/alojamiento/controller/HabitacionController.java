@@ -16,7 +16,9 @@ import java.util.List;
 
 @SecurityRequirement(name = "bearerAuth")
 @RestController
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin(origins = "http://localhost:3000")
+
+//@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/habitaciones")
 @Tag(name = "Habitacion", description = "This endpoint permits create, read, update and delete operations for habitaciones")
 public class HabitacionController {

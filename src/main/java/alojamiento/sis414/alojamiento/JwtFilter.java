@@ -29,7 +29,12 @@ public class JwtFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
                                     FilterChain filterChain) throws ServletException, IOException {
 
-        // ✅ Ignorar rutas públicas
+        if ("OPTIONS".equalsIgnoreCase(request.getMethod())) {
+            response.setStatus(HttpServletResponse.SC_OK);
+            filterChain.doFilter(request, response);
+            return;
+        }
+
         String path = request.getRequestURI();
         if (path.startsWith("/auth")) {
             filterChain.doFilter(request, response);
@@ -43,9 +48,7 @@ public class JwtFilter extends OncePerRequestFilter {
 
             if (blackListService.isBlackListToken(token)) {
                 System.out.println("Intercepted blacklisted token");
-                // Opcional: podrías devolver 401 aquí si lo deseas
-                // response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-                // return;
+
             } else if (!jwtUtil.isTokenExpired(token)) {
                 String username = jwtUtil.extractUsername(token);
                 UsernamePasswordAuthenticationToken authentication =
