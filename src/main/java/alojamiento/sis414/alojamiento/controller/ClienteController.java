@@ -13,10 +13,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @SecurityRequirement(name = "bearerAuth")
 @RestController
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin(origins = "http://localhost:3000")
+
+//@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/clientes")
 @Tag(name = "Cliente", description = "This endpoint permits create, read, update and delete operations for clientes")
 public class ClienteController {
@@ -61,5 +64,20 @@ public class ClienteController {
     public ResponseEntity<String> deleteCliente(@PathVariable Long id) {
         clienteRepository.deleteById(id);
         return new ResponseEntity<>("", HttpStatus.NO_CONTENT);
+    }
+    @PutMapping("/{id}")
+    public ResponseEntity<Cliente> updateCliente(@PathVariable Long id, @RequestBody Cliente clienteRequest) {
+        Optional<Cliente> clienteOptional = clienteRepository.findById(id);
+        if (clienteOptional.isPresent()) {
+            Cliente cliente = clienteOptional.get();
+            cliente.setNombres(clienteRequest.getNombres());
+            cliente.setApellidos(clienteRequest.getApellidos());
+            cliente.setCi(clienteRequest.getCi());
+            cliente.setTelefono(clienteRequest.getTelefono());
+            clienteRepository.save(cliente);
+            return new ResponseEntity<>(cliente, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 }
