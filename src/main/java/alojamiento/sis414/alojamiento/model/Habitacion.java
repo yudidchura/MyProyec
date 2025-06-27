@@ -1,85 +1,85 @@
 package alojamiento.sis414.alojamiento.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.persistence.*;
-import java.util.List;
+    import com.fasterxml.jackson.annotation.JsonIgnore;
+    import com.fasterxml.jackson.annotation.JsonProperty;
+    import jakarta.persistence.*;
+    import java.util.List;
 
-@Entity
-@Table(name = "habitaciones")
-public class Habitacion {
+    @Entity
+    @Table(name = "habitaciones")
+    public class Habitacion {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-    private Long id;
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private String numero;
+        private Long id;
 
-    @Enumerated(EnumType.STRING)
-    private TipoHabitacion tipo;
+        private String numero;
 
-    private double precio;
-    private boolean disponible;
+        @Enumerated(EnumType.STRING)
+        private TipoHabitacion tipo;
 
-    @OneToMany(mappedBy = "habitacion", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonIgnore
-    private List<Reserva> reservas;
+        private double precio;
+        private boolean disponible;
 
-    public Habitacion() {}
+        @OneToMany(mappedBy = "habitacion", cascade = CascadeType.ALL, orphanRemoval = true)
+        @JsonIgnore
+        private List<Reserva> reservas;
 
-    public Habitacion(String numero, TipoHabitacion tipo, double precio, boolean disponible) {
-        this.numero = numero;
-        this.tipo = tipo;
-        this.precio = precio;
-        this.disponible = disponible;
+        public Habitacion() {}
+
+        public Habitacion(String numero, TipoHabitacion tipo, double precio, boolean disponible) {
+            this.numero = numero;
+            this.tipo = tipo;
+            this.precio = precio;
+            this.disponible = disponible;
+        }
+
+        public Long getId() {
+            return id;
+        }
+
+        public void setId(Long id) {
+            this.id = id;
+        }
+
+        public String getNumero() {
+            return numero;
+        }
+
+        public void setNumero(String numero) {
+            this.numero = numero;
+        }
+
+        public TipoHabitacion getTipo() {
+            return tipo;
+        }
+
+        public void setTipo(TipoHabitacion tipo) {
+            this.tipo = tipo;
+        }
+
+        public double getPrecio() {
+            return precio;
+        }
+
+        public void setPrecio(double precio) {
+            this.precio = precio;
+        }
+
+        public boolean isDisponible() {
+            return disponible;
+        }
+
+        public void setDisponible(boolean disponible) {
+            this.disponible = disponible;
+        }
+
+        public List<Reserva> getReservas() {
+            return reservas;
+        }
+
+        public void setReservas(List<Reserva> reservas) {
+            this.reservas = reservas;
+        }
     }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNumero() {
-        return numero;
-    }
-
-    public void setNumero(String numero) {
-        this.numero = numero;
-    }
-
-    public TipoHabitacion getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(TipoHabitacion tipo) {
-        this.tipo = tipo;
-    }
-
-    public double getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(double precio) {
-        this.precio = precio;
-    }
-
-    public boolean isDisponible() {
-        return disponible;
-    }
-
-    public void setDisponible(boolean disponible) {
-        this.disponible = disponible;
-    }
-
-    public List<Reserva> getReservas() {
-        return reservas;
-    }
-
-    public void setReservas(List<Reserva> reservas) {
-        this.reservas = reservas;
-    }
-}

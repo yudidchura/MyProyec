@@ -12,6 +12,7 @@ public abstract class Persona {
 
     private String nombres;
     private String apellidos;
+    @Column(nullable = false, unique = true) // 🔐 evita duplicados a nivel BD
     private String ci;
     private String telefono;
 

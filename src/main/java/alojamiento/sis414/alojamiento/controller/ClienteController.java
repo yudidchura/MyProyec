@@ -46,8 +46,14 @@ public class ClienteController {
                     @ApiResponse(responseCode = "400", description = "Bad Request")
             }
     )
-    public ResponseEntity<Cliente> createCliente(@RequestBody Cliente clienteRequest) {
-        clienteRequest.setId(null);
+    public ResponseEntity<?> createCliente(@RequestBody Cliente clienteRequest) {
+        if (clienteRepository.existsByCi(clienteRequest.getCi())) {
+            return ResponseEntity
+                    .status(HttpStatus.BAD_REQUEST)
+                    .body("El CI ya está registrado");
+        }
+
+        clienteRequest.setId(null); // por si acaso
         Cliente cliente = clienteRepository.save(clienteRequest);
         return new ResponseEntity<>(cliente, HttpStatus.CREATED);
     }
@@ -62,22 +68,47 @@ public class ClienteController {
             }
     )
     public ResponseEntity<String> deleteCliente(@PathVariable Long id) {
-        clienteRepository.deleteById(id);
+        Optional<Cliente> clienteOpt = clienteRepository.findById(id);
+
+        if (clienteOpt.isEmpty()) {
+            return new ResponseEntity<>("Cliente no encontrado", HttpStatus.NOT_FOUND);
+        }
+
+        Cliente cliente = clienteOpt.get();
+
+        // Validación: ¿tiene reservas asociadas?
+        if (cliente.getReservas() != null && !cliente.getReservas().isEmpty()) {
+            return new ResponseEntity<>("No se puede eliminar el cliente porque tiene reservas asociadas", HttpStatus.BAD_REQUEST);
+        }
+
+        clienteRepository.delete(cliente);
         return new ResponseEntity<>("", HttpStatus.NO_CONTENT);
     }
+
+
     @PutMapping("/{id}")
-    public ResponseEntity<Cliente> updateCliente(@PathVariable Long id, @RequestBody Cliente clienteRequest) {
+    public ResponseEntity<?> updateCliente(@PathVariable Long id, @RequestBody Cliente clienteRequest) {
         Optional<Cliente> clienteOptional = clienteRepository.findById(id);
-        if (clienteOptional.isPresent()) {
-            Cliente cliente = clienteOptional.get();
-            cliente.setNombres(clienteRequest.getNombres());
-            cliente.setApellidos(clienteRequest.getApellidos());
-            cliente.setCi(clienteRequest.getCi());
-            cliente.setTelefono(clienteRequest.getTelefono());
-            clienteRepository.save(cliente);
-            return new ResponseEntity<>(cliente, HttpStatus.OK);
-        } else {
+        if (clienteOptional.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+
+        Cliente cliente = clienteOptional.get();
+
+
+        if (!cliente.getCi().equals(clienteRequest.getCi()) &&
+                clienteRepository.existsByCi(clienteRequest.getCi())) {
+            return ResponseEntity
+                    .status(HttpStatus.BAD_REQUEST)
+                    .body("El CI ya está registrado por otro cliente");
+        }
+
+        cliente.setNombres(clienteRequest.getNombres());
+        cliente.setApellidos(clienteRequest.getApellidos());
+        cliente.setCi(clienteRequest.getCi());
+        cliente.setTelefono(clienteRequest.getTelefono());
+
+        clienteRepository.save(cliente);
+        return new ResponseEntity<>(cliente, HttpStatus.OK);
     }
 }
